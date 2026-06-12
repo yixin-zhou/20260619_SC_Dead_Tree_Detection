@@ -1,0 +1,19 @@
+# Teacher answer notebook - do not upload to GitHub
+20260616_Dead_tree_detection_with_answer.ipynb
+
+# Generated outputs - students will create these during the exercise
+outputs/
+
+# Model weights - download separately from Google Drive
+weights/*.pt
+
+# QGIS project files
+*.qgs
+*.qgz
+*.qgd
+*.qgs~
+*.qgz~
+
+# System files
+.DS_Store
+.ipynb_checkpoints/

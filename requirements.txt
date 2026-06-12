@@ -1,0 +1,14 @@
+ultralytics
+sahi
+rasterio
+geopandas
+shapely
+pyogrio
+matplotlib
+numpy
+torch
+torchvision
+opencv-python
+pillow
+jupyterlab
+ipykernel
