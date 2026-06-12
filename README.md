@@ -93,10 +93,3 @@ RUN_ENV = "local"
 │   └── best.pt        # download this file separately
 └── outputs/           # created by the notebook, not uploaded to GitHub
 ```
-
-## Notes
-
-- The answer notebook is not included on GitHub.
-- The `outputs/` folder is not uploaded because students will create their own results.
-- QGIS project files are ignored by Git.
-- If you see `No module named 'google.colab'`, change `RUN_ENV` to `"local"` because you are not running inside Colab.
