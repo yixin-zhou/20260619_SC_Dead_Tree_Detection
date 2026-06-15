@@ -12,7 +12,7 @@ Students will load aerial images, run a pretrained YOLO model, compare inference
 
 - A GPU is recommended. Google Colab with a GPU runtime is the easiest option.
 - Python packages listed in `requirements.txt`.
-- The model weight file `best.pt`, downloaded from Google Drive:
+- The model weight file `best.pt` and `baseline.pt`, downloaded from Google Drive:
 
   https://drive.google.com/file/d/1Cp0LFuUOyjW5N5ECib4xm3HM2spoEY05/view?usp=drive_link
 
