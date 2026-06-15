@@ -12,14 +12,15 @@ Students will load aerial images, run a pretrained YOLO model, compare inference
 
 - A GPU is recommended. Google Colab with a GPU runtime is the easiest option.
 - Python packages listed in `requirements.txt`.
-- The model weight file `best.pt` and `baseline.pt`, downloaded from Google Drive:
+- The model weight files `best.pt` and `baseline.pt`, downloaded from Google Drive:
 
   https://drive.google.com/file/d/1Cp0LFuUOyjW5N5ECib4xm3HM2spoEY05/view?usp=drive_link
 
-After downloading, put the file here:
+After downloading, put both files here:
 
 ```text
 weights/best.pt
+weights/baseline.pt
 ```
 
 ## Option 1: Use Google Drive and Colab
@@ -63,10 +64,11 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-Download `best.pt` from Google Drive and place it in:
+Download `best.pt` and `baseline.pt` from Google Drive and place them in:
 
 ```text
 weights/best.pt
+weights/baseline.pt
 ```
 
 Open the notebook:
@@ -90,6 +92,9 @@ RUN_ENV = "local"
 ├── data/
 ├── img/
 ├── weights/
-│   └── best.pt        # download this file separately
+│   ├── best.pt        # download this file separately
+│   └── baseline.pt    # download this file separately
 └── outputs/           # created by the notebook, not uploaded to GitHub
 ```
+
+Model weights are not uploaded to GitHub. They should be downloaded separately and placed in the `weights/` folder.
