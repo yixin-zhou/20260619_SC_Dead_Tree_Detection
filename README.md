@@ -1,27 +1,47 @@
 # Dead Tree Detection
 
-This project is a hands-on notebook for detecting dead trees from high-resolution RGB aerial imagery of the Sihlwald forest.
+This project is a hands-on notebook for detecting dead trees from high-resolution RGB aerial imagery.
 
-Students will load aerial images, run a pretrained YOLO model, compare inference strategies, implement simple post-processing, analyse dead tree detections over time, and export the final results for GIS visualization.
+Students will run a pretrained YOLO model, compare inference strategies, implement simple post-processing, analyse dead tree detections over time, test model generalization on a Ticino image, and try a small annotation-to-training workflow with LabelMe.
 
 <p align="center">
   <img src="img/sihlwald.png" alt="Sihlwald forest map" width="650"/>
 </p>
 
+## Notebook
+
+Open:
+
+```text
+20260616_Dead_tree_detection.ipynb
+```
+
+The notebook contains:
+
+- Sihlwald dead tree detection with a pretrained model
+- Exercise 1: inference and post-processing hyperparameters
+- Exercise 2: Sihlwald time series analysis
+- Exercise 3: model generalization to Ticino, comparing `baseline.pt` and `best.pt`
+- Exercise 4: hands-on annotation with LabelMe and a simple YOLO training template
+
 ## What You Need
 
 - A GPU is recommended. Google Colab with a GPU runtime is the easiest option.
 - Python packages listed in `requirements.txt`.
-- The model weight files `best.pt` and `baseline.pt`, downloaded from Google Drive:
-
-  https://drive.google.com/file/d/1Cp0LFuUOyjW5N5ECib4xm3HM2spoEY05/view?usp=drive_link
-
-After downloading, put both files here:
+- Two model weight files:
 
 ```text
 weights/best.pt
 weights/baseline.pt
 ```
+
+Download the weights from Google Drive:
+
+```text
+https://drive.google.com/file/d/1Cp0LFuUOyjW5N5ECib4xm3HM2spoEY05/view?usp=drive_link
+```
+
+Model weights are not uploaded to GitHub. After downloading, place both `.pt` files in the `weights/` folder.
 
 ## Option 1: Use Google Drive and Colab
 
@@ -29,7 +49,9 @@ This is the recommended setup for students.
 
 1. Open the shared project folder:
 
+   ```text
    https://drive.google.com/drive/folders/1iynveB87MwLTyCciUT4te3oixAqP1EZD?usp=sharing
+   ```
 
 2. Save the folder to your own Google Drive.
 
@@ -83,18 +105,50 @@ In the first setup cell, use:
 RUN_ENV = "local"
 ```
 
+## Annotation Exercise
+
+Exercise 4 uses LabelMe. The images for annotation are stored in:
+
+```text
+data/images_for_annotation/
+```
+
+Each image is a 500 x 500 RGB PNG tile. LabelMe should save one `.json` file next to each `.png` image.
+
+Use this label name exactly:
+
+```text
+dead_tree
+```
+
+Install and open LabelMe locally:
+
+```bash
+pip install labelme
+labelme data/images_for_annotation
+```
+
 ## Project Structure
 
 ```text
 .
 ├── 20260616_Dead_tree_detection.ipynb
+├── README.md
 ├── requirements.txt
 ├── data/
+│   ├── Sihlwald_Research_Area/
+│   ├── test_data_500m/
+│   ├── test_data_200m/
+│   └── images_for_annotation/
 ├── img/
 ├── weights/
-│   ├── best.pt        # download this file separately
-│   └── baseline.pt    # download this file separately
+│   ├── best.pt        # download separately
+│   └── baseline.pt    # download separately
 └── outputs/           # created by the notebook, not uploaded to GitHub
 ```
 
-Model weights are not uploaded to GitHub. They should be downloaded separately and placed in the `weights/` folder.
+## Notes
+
+- The answer notebook is not uploaded to GitHub.
+- The `outputs/` folder contains generated results and is not required for starting the exercise.
+- QGIS project files and model weights are ignored by Git.

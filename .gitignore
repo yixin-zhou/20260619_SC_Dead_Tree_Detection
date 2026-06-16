@@ -4,6 +4,11 @@
 # Generated outputs - students will create these during the exercise
 outputs/
 
+# Generated annotation crops - prepared locally, not uploaded to GitHub
+data/annotation_crops/
+data/images_for_annotation/
+data/images_for_annotation_*/
+
 # Model weights - download separately from Google Drive
 weights/*.pt
 
