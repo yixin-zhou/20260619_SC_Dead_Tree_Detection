@@ -10,5 +10,6 @@ torch
 torchvision
 opencv-python
 pillow
+labelme
 jupyterlab
 ipykernel
