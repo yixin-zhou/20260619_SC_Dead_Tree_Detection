@@ -93,6 +93,12 @@ weights/best.pt
 weights/baseline.pt
 ```
 
+If you want to do Exercise 4 locally, also download the annotation images from the shared Google Drive folder and place them in:
+
+```text
+data/images_for_annotation/
+```
+
 Open the notebook:
 
 ```text
@@ -112,6 +118,8 @@ Exercise 4 uses LabelMe. The images for annotation are stored in:
 ```text
 data/images_for_annotation/
 ```
+
+These annotation images are not uploaded to GitHub. If you are running the notebook locally, download them from the shared Google Drive folder first.
 
 Each image is a 500 x 500 RGB PNG tile. LabelMe should save one `.json` file next to each `.png` image.
 
@@ -146,9 +154,3 @@ labelme data/images_for_annotation
 │   └── baseline.pt    # download separately
 └── outputs/           # created by the notebook, not uploaded to GitHub
 ```
-
-## Notes
-
-- The answer notebook is not uploaded to GitHub.
-- The `outputs/` folder contains generated results and is not required for starting the exercise.
-- QGIS project files and model weights are ignored by Git.
